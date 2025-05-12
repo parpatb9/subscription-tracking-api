@@ -14,7 +14,7 @@ export const sendReminderEmail = async ({to , type, subscription})=>{
     }
 
     const mailInfo = {
-        username: subscription.user.name,
+        userName: subscription.user.name,
         subscriptionName: subscription.name,
         renewalDate: dayjs(subscription.renewelDate).format('MMM D, YYYY'),
         price:`${subscription.currency} ${subscription.price} (${subscription.frequency})`,
